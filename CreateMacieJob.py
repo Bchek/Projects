@@ -18,10 +18,7 @@ def lambda_handler(event, context):
     old_datetime = old_datetime [:-3]
     old_datetime = old_datetime + 'Z'
     
-    #sqsclient = boto3.client('sqs', 'us-west-2')
-    #response = sqsclient.purge_queue(QueueUrl = 'https://sqs.us-west-2.amazonaws.com/811791950107/MySQSQueue' )
-    #print(response)
-    
+   
     response1 = response = client.create_classification_job(
     customDataIdentifierIds=[
         '53bf2596-fa63-4bfe-95c4-88a3a8197523',
@@ -33,7 +30,7 @@ def lambda_handler(event, context):
     s3JobDefinition={
         'bucketDefinitions': [
             {
-                'accountId': '811791950107',
+                'accountId': '111111111',
                 'buckets': [
                     'maciebharathbucket',
                 ]
